@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+
+{% block title %}TechMonorepo – Build Fast. Scale Effortlessly{% endblock %}
+
+{% block content %}
+
+<!-- Hero – responsive scaling -->
+<section
+    class="relative pt-20 pb-16 md:pt-32 md:pb-32 bg-gradient-to-b from-white via-gray-50/50 to-white dark:from-gray-950 dark:via-gray-900/30 dark:to-gray-950">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 text-center">
+        <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6 md:mb-8">
+            Build in a weekend.<br class="sm:hidden">
+            <span class="text-primary">Scale to millions.</span>
+        </h1>
+        <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 px-4 sm:px-0">
+            Unified platform for Android • Web • Data Science • Analysis • Engineering.<br class="hidden sm:inline">
+            Monorepo speed. Enterprise reliability.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <a href="#contact"
+                class="bg-primary text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-emerald-700 transition shadow-md">
+                Get Started →
+            </a>
+            <a href="#starters"
+                class="border border-gray-300 dark:border-gray-700 px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Explore Starters
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features – responsive grid -->
+<section id="features" class="py-16 md:py-24 bg-gray-50 dark:bg-gray-900/30">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16">One repo. All your work.</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div
+                class="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition">
+                <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Android Development</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-base md:text-lg">Native apps with modern tooling — fast
+                    iteration in monorepo.</p>
+            </div>
+            <!-- Repeat for other two cards – same structure -->
+            <!-- ... -->
+        </div>
+    </div>
+</section>
+
+<!-- Starters section – similar responsive grid -->
+<section id="starters" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16">Jump-start your next project
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Starter cards – same responsive padding/font -->
+            <!-- ... -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Supabase-style bordered cards section -->
+<section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-900/40">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10 md:mb-16 text-gray-900 dark:text-white">
+            Popular Guides & Resources
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+
+            <!-- Card 1 -->
+            <div
+                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all duration-200">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <!-- Optional small icon (you can use SVG or emoji) -->
+                        <span class="text-2xl">🚀</span>
+                        <h3
+                            class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                            Get Started with Supabase
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                        Set up your project in minutes. Authentication, database, storage — all included.
+                    </p>
+                    <a href="#" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                        Read guide →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all duration-200">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">🔐</span>
+                        <h3
+                            class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                            Authentication
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                        Row Level Security, OAuth providers, magic links, phone auth and more.
+                    </p>
+                    <a href="#" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                        Explore docs →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all duration-200">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">🗄️</span>
+                        <h3
+                            class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                            Database (Postgres)
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                        Full Postgres with extensions, realtime subscriptions, and easy querying.
+                    </p>
+                    <a href="#" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                        View reference →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden hover:border-primary hover:shadow-md transition-all duration-200">
+                <div class="p-6 md:p-7">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">📦</span>
+                        <h3
+                            class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                            Storage & Edge Functions
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                        File storage + serverless functions — global & fast.
+                    </p>
+                    <a href="#" class="mt-4 inline-flex items-center text-primary font-medium hover:underline">
+                        Get building →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed... -->
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA – responsive -->
+<section class="py-16 md:py-24 bg-primary text-white text-center">
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Ready to unify your stack?</h2>
+        <p class="text-lg sm:text-xl mb-8 md:mb-10 opacity-90">Start building faster today — monorepo style.</p>
+        <a href="#contact"
+            class="bg-white text-primary px-8 py-4 md:px-10 md:py-5 rounded-xl font-bold text-base md:text-lg hover:bg-gray-100 transition shadow-lg inline-block">
+            Talk to Us →
+        </a>
+    </div>
+</section>
+
+{% endblock %}
