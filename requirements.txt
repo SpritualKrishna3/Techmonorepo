@@ -1,0 +1,42 @@
+Django>=5.0,<6.0
+
+# Server
+# gunicorn
+# uvicorn[standard]
+# whitenoise
+
+# Frontend
+django-tailwind
+django-browser-reload
+
+# Database
+# psycopg[binary]
+
+# Auth & Security
+# django-allauth
+# django-environ
+# argon2-cffi
+
+# SEO
+django-robots
+django-sitemap
+django-compressor
+
+# API
+djangorestframework
+django-cors-headers
+
+# AI / HTTP
+requests
+httpx
+python-dotenv
+django-meta
+
+
+# Utilities
+Pillow
+python-dateutil
+
+# Dev
+django-debug-toolbar
+ipython

@@ -1,0 +1,52 @@
+version: '3.9'
+
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+      # If you want to persist sqlite DB outside container (recommended for dev):
+      # - dbdata:/app/db.sqlite3
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=*
+      - SECRET_KEY=django-insecure-&ephkazmetb$3)rrk4)!cb2@2fxjgj1(o$yx+y!lze+@4(do67
+      # - BACKEND_API_URL=http://127.0.0.1:8000   # usually not needed in same container
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  # Optional - if you later want to switch to PostgreSQL (strongly recommended)
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: techforge_db
+      POSTGRES_USER: techforge
+      POSTGRES_PASSWORD: changeme123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"   # mapping to 5433 to avoid conflict with local postgres
+
+  # Optional - tailwindcss watcher (very useful during development)
+  tailwind:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      sh -c "npx tailwindcss -i ./static/src/input.css -o ./static/css/output.css --watch"
+    volumes:
+      - .:/app
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  # dbdata:   # uncomment if you want persistent sqlite
